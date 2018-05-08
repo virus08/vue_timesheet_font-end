@@ -11,10 +11,10 @@
       <p>Login in. To see it in action.</p>
       <div class="m-t" role="form">
         <div class="form-group">
-          <input class="form-control" placeholder="Username" >
+          <input class="form-control" placeholder="Username" v-model="credentials.email">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password"v-model="credentials.password">
         </div>
           <button type="submit" class="btn btn-primary block full-width m-b" @click="login">Login</button>
         </div>
@@ -32,15 +32,19 @@ export default {
   name: 'layout',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      credentials: {
+        "email": "wanchai@vstecs.co.th",
+        "password":"test"
+      }
     }
   },
   methods: {
     login: function () {
       //alert('test')
-      this.$http.post('http://localhost:8080/api/users/login', {"email":"wanchai@vstecs.co.th","password":"test"}).then((response) => {
+      this.$http.post('http://localhost:8080/api/users/login', this.credentials).then((response) => {
 	       //success
-	       myStorage.setItem('Token', 'Token')
+	       myStorage.setItem('Token', response.body.id)
+	       myStorage.setItem('UID', response.body.userId)
 	       myStorage.setItem('isAuthenticated', true)
 	       location.reload()
 	    }, (response) => {
