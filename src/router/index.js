@@ -9,6 +9,7 @@ const routes = [
   { path: '/login', component: login },
   { path: '*', component: NotFound }
 ]
+var myStorage = window.localStorage
 
 Vue.use(Router)
 
@@ -19,9 +20,9 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
-  const isAuthenticated = 1
+  const isAuthenticated = myStorage.getItem('isAuthenticated')
   if (requiresAuth && !isAuthenticated) {
-    next('/signin')
+    next('/login')
   } else {
     next()
   }
