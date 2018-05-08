@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -9,6 +8,9 @@
 export default {
   name: 'App'
 }
+
+// require('@/assets/js/jquery-2.1.1.js')
+// require('@/assets/js/bootstrap.min.js')
 </script>
 <style src="@/assets/css/bootstrap.min.css"></style>
 <style src="@/assets/font-awesome/css/font-awesome.css"></style>
