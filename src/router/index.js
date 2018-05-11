@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import layout from '@/views/layout/layout'
+import layout from '@/views/layout/Layout'
 import login from '@/views/login/login'
+import Logout from '@/api/logout'
 import NotFound from '@/views/NotFound'
+
+
 import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
@@ -10,6 +13,7 @@ Vue.use(VueResource)
 const routes = [
   { path: '/', component: layout, meta: { requiresAuth: true } },
   { path: '/login', component: login },
+  { path: '/Logout', component: Logout },
   { path: '*', component: NotFound }
 ]
 var myStorage = window.localStorage
