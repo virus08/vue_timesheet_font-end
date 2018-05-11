@@ -1,7 +1,4 @@
 <template>
-<div>
-	test
-</div>
 </template>
 
 <script>
@@ -10,8 +7,8 @@ export default {
   name: 'Logout',
   methods : {
   	logout(){
-  		location.reload()
   		window.localStorage.clear();
+		location.reload()
   	}
   },
   created: function () {

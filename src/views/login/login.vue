@@ -41,7 +41,8 @@ export default {
   methods: {
     login: function () {
       //alert('test')
-      this.$http.post('http://localhost:8080/api/users/login', this.credentials).then((response) => {
+      API = window.API
+      this.$http.post( API.LOGIN , this.credentials).then((response) => {
 	       //success
 	       myStorage.setItem('Token', response.body.id)
 	       myStorage.setItem('UID', response.body.userId)
