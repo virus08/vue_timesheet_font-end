@@ -12,9 +12,7 @@
       <div class="m-t" role="form">
         <div class="form-group">
           <input class="form-control" placeholder="Username" v-model="credentials.email">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password"v-model="credentials.password">
+          <input type="password" class="form-control" placeholder="Password" v-model="credentials.password">
         </div>
           <button type="submit" class="btn btn-primary block full-width m-b" @click="login">Login</button>
         </div>
