@@ -9,7 +9,7 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search for page">
                 </div>
-                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" class="btn btn-primary">Search</button> 
             </form>
         </div>
     </div>
