@@ -5,6 +5,11 @@ import login from '@/views/login/login'
 import Logout from '@/api/logout'
 import NotFound from '@/views/NotFound'
 import HelloWorld from '@/components/HelloWorld'
+import TableComponent from 'vue-table-component';
+
+Vue.use(TableComponent);
+
+import {Timesheet, Dashboard, Certificate,Project, KPI, Profile } from '@/components'
 
 require('@/api/main.js')
 
@@ -20,10 +25,11 @@ const routes = [
     meta: { requiresAuth: true },
     children: [
         { path: '', component: HelloWorld ,props: { UID: 'Notify page' }  },
-        { path: 'Dashboard', component: HelloWorld ,props: { UID: 'Dashboard' } },
-        { path: 'Timesheet', component: HelloWorld ,props: { UID: 'Timesheet' } },
-        { path: 'Certificate', component: HelloWorld ,props: { UID: 'Certificate' } },
-        { path: 'KPI', component: HelloWorld ,props: { UID: 'Key Performance Indicator' } },
+        { path: 'Dashboard', component: Dashboard ,props: { UID: 'Dashboard' } },
+        { path: 'Timesheet', component: Timesheet ,props: { UID: 'Timesheet' } },
+        { path: 'Certificate', component: Certificate ,props: { UID: 'Certificate' } },
+        { path: 'Project', component: Project ,props: { UID: 'Project Table' } },
+        { path: 'KPI', component: KPI ,props: { UID: 'Key Performance Indicator' } },
         { path: '*', component: NotFound }
       ]
    },
@@ -32,7 +38,7 @@ const routes = [
     component: layout, 
     meta: { requiresAuth: true },
     children: [
-        { path: ':UID', component: HelloWorld ,props: true},
+        { path: ':UID', component: Profile ,props: true},
         { path: '*', component: NotFound }
       ]  
    },

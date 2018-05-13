@@ -31,6 +31,8 @@ export default {
 <style src="@/assets/font-awesome/css/font-awesome.css"></style>
 <style src="@/assets/css/animate.css"></style>
 <style src="@/assets/css/style.css"></style>
+<style src="@/assets/css/table-component.css"></style>
+
 
 <style>
 

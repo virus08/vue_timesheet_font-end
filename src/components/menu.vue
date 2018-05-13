@@ -6,6 +6,7 @@
 						<li :class="{ active: location==='/home/Dashboard' }"><a href="/home/Dashboard">Dashboard</a></li>
 						<li :class="{ active: location==='/home/Timesheet' }"><a href="/home/Timesheet">Timesheet</a></li>
 						<li :class="{ active: location==='/home/Certificate' }"><a href="/home/Certificate">Certificate</a></li>
+						<li :class="{ active: location==='/home/Project' }"><a href="/home/Project">Project</a></li>
 						<li :class="{ active: location==='/home/KPI' }"><a href="/home/KPI">KPI</a></li>
 					</ul>
 				</li>
