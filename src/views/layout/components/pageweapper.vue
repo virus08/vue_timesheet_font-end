@@ -16,7 +16,7 @@
                 </li>
                 <!-- <mailb/><msgb/> -->
                 <li>
-                    <a href="Logout">
+                    <a href="/Logout">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>
                 </li>

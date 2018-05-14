@@ -8,31 +8,41 @@
 </template>
 
 <script>
+// import tableData from 'vuetable-2/src/components/Vuetable'
 export default {
   name: 'HelloWorld',
   props: ['UID'],
+  components: {},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+      getData : function () {
+        /*
+        API = window.API
+        var UID = window.localStorage.getItem('UID')
+        this.$http.get(API).then((response) => {
+          //success
+          this.tableData = response.body
+        }, (response) => {
+          //error
+          alert(response.body.error.message)
+        });
+         */
+      }
+  },
+  created: function () {
+      this.getData();
+  },
+  mounted: function () {
+    
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

@@ -17,6 +17,7 @@
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
     "vue-table-component": "^1.9.1",
+    "vue-truncate-filter": "^1.1.7",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -58,9 +59,14 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-date-filter": "^1.0.1",
+    "vue-filter-date-format": "^1.0.1",
     "vue-loader": "^13.3.0",
+    "vue-moment": "^3.2.0",
     "vue-style-loader": "^3.0.1",
+    "vue-tables-2": "^1.4.50",
     "vue-template-compiler": "^2.5.2",
+    "vuetable-2": "^1.7.5",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
