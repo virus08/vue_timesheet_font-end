@@ -24,12 +24,12 @@ const routes = [
     component: layout, 
     meta: { requiresAuth: true },
     children: [
-        { path: '', component: HelloWorld ,props: { UID: 'Notify page' }  },
-        { path: 'Dashboard', component: Dashboard ,props: { UID: 'Dashboard' } },
-        { path: 'Timesheet', component: Timesheet ,props: { UID: 'Timesheet' } },
-        { path: 'Certificate', component: Certificate ,props: { UID: 'Certificate' } },
-        { path: 'Project', component: Project ,props: { UID: 'Project Table' } },
-        { path: 'KPI', component: KPI ,props: { UID: 'Key Performance Indicator' } },
+        { path: '', component: HelloWorld ,props: { PageName: 'Notify page' }  },
+        { path: 'Dashboard', component: Dashboard ,props: { PageName: 'Dashboard' } },
+        { path: 'Timesheet', component: Timesheet ,props: { PageName: 'Timesheet' } },
+        { path: 'Certificate', component: Certificate ,props: { PageName: 'Certificate' } },
+        { path: 'Project', component: Project ,props: { PageName: 'Project Table' } },
+        { path: 'KPI', component: KPI ,props: { PageName: 'Key Performance Indicator' } },
         { path: '*', component: NotFound }
       ]
    },
