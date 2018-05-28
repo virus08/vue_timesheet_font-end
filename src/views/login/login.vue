@@ -11,7 +11,7 @@
       <p>Login in. To see it in action.</p>
       <div class="m-t" role="form">
         <div class="form-group">
-          <input class="form-control" placeholder="Username" v-model="credentials.email">
+          <input class="form-control" placeholder="Email@vstecs.co.th" v-model="credentials.email">
         </div>
         <div class="form-group">
           <input type="password" class="form-control" placeholder="Password" v-model="credentials.password">
@@ -33,8 +33,8 @@ export default {
   data () {
     return {
       credentials: {
-        "email": "wanchai@vstecs.co.th",
-        "password":"test"
+        "email": "",
+        "password":""
       }
     }
   },
