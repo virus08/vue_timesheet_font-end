@@ -357,6 +357,7 @@ export default {
 			var API_TIMESHEET_BY_UID = API.TIMESHEET + '?filter[where][UID]='+ UID 
 			var API_TIMESHEET_GT_THIS_Y= API_TIMESHEET_BY_UID + '&filter[where][create_date][gt]=2018-01&filter[where][Job_date][gt]=2018-01'
 			var API_TIMESHEET = API_TIMESHEET_GT_THIS_Y +'&filter[order]=id%20DESC&filter[limit]=100'
+			//console.log(API_TIMESHEET)
 			this.$http.get(API_TIMESHEET).then((response) => {
 	       //success
 				this.tableData = response.body
